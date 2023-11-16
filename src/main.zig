@@ -12,6 +12,13 @@ fn runServer(server: *http.Server, allocator: std.mem.Allocator) !void {
 };
 
 
+fn handleRequest(response: *http.Server.Response, allocator: std.mem.Allocator) !void {
+    // Need to build
+
+    // Returns a 404
+    response.status = .not_found;
+    try response.do();
+}
 
 
 pub fn main() !void {
