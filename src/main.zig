@@ -6,6 +6,14 @@ const log = std.log.scoped(.server);
 const serverAddress = "127.0.0.1";
 const serverPort = 8000;
 
+fn runServer(server: *http.Server, allocator: std.mem.Allocator) !void {
+    // Need to build
+    try handleRequest(&response, allocator);
+};
+
+
+
+
 pub fn main() !void {
 
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
